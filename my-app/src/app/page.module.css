@@ -1,11 +1,11 @@
 .page {
-  --background: #fafafa;
+  --background: #fff;
   --foreground: #fff;
 
   --text-primary: #000;
   --text-secondary: #666;
 
-  --button-primary-hover: #ff001e;
+  --button-primary-hover: #c41a1a;
   --button-secondary-hover: #f2f2f2;
   --button-secondary-border: #ebebeb;
 
@@ -24,7 +24,7 @@
   width: 100%;
   max-width: 800px;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   background-color: var(--foreground);
   padding: 120px 60px;
@@ -63,7 +63,8 @@
 
 .ctas {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   max-width: 440px;
   gap: 16px;
@@ -88,6 +89,7 @@ a.primary {
   background: var(--text-primary);
   color: var(--background);
   gap: 8px;
+  background-color:#ff001e
 }
 
 a.secondary {
@@ -124,9 +126,9 @@ a.secondary {
 }
 
 @media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+.logo {
+  object-fit: cover;
+}
 
   .page {
     --background: #000;
@@ -147,4 +149,72 @@ a.secondary {
   background: color-mix(in srgb, currentColor 8%, transparent);
   padding: 0.1em 0.4em;
   border-radius: 6px;
+}
+
+.phone {
+  position: relative;
+  width: 20%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.botoes {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 2;
+}
+
+.botao {
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px #0005;
+  transition: transform 0.2s;
+}
+
+.botao:hover {
+  transform: scale(1.1);
+}
+
+.recusar {
+  background-color: #ff3b30;
+}
+
+.aceitar {
+  background-color: #34c759;
+}
+
+.botaoMusica {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10;
+
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+
+  background-color: #222;
+  color: white;
+  font-size: 24px;
+
+  cursor: pointer;
+  box-shadow: 0 4px 12px #0005;
+}
+
+.botaoMusica:hover {
+  transform: scale(1.1);
 }
