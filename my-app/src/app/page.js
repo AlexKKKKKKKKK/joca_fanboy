@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import RandomRedirect from "@/components/randomRedirect";
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
             Desbasile Agora
           </a>
         </div>
+        <RandomRedirect />
       </main>
     </div>
   );
